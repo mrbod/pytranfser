@@ -9,7 +9,7 @@ import subprocess as sp
 
 def send_stream(name, fp):
     '''send file to transfer.sh'''
-    r = requests.put(f'https://transfer.sh/{name}', data=fp, timeout=20)
+    r = requests.put(f'https://transfer.sh/{name}', data=fp, timeout=60)
     r.raise_for_status()
     return r
 
